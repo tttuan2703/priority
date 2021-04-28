@@ -1,0 +1,63 @@
+﻿
+@{
+    Layout = null;
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="~/Css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="~/Css/bootstrap-theme.css" />
+    <script type="text/javascript" src="~/Js/bootstrap.js"></script>
+    <script type="text/javascript" src="~/Js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="~/Css/style.css" />
+    <style>
+        .ms_important {
+            color: blueviolet !important;
+        }
+
+        .ms_inline {
+            color: red;
+        }
+
+        .row {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+
+            <h2 class="text-center">Priority CSS Ranking</h2>
+            <h4>Case 1: Full ( import(color:blueviolet) - inline-style(color:red) - media-query(color:aqua) - selector - ruler order - browser default )</h4>
+            <p class="ms_important ms_inline ms_class ms_media " id="ms_id"> Priory important </p>
+        </div>
+        <div class="row">
+            <h4>Case 2: Inline style(color:black) - Internal style(color:red) - External style sheets(Css)(color:yellow)</h4>
+            <p style="color:black;" class="ms_inline ms_class">
+                Result : Inline style (color:black) will be given priority
+            </p>
+            <h4>Case (Internal style(color:red) - External style sheets(color:yellow))</h4>
+            <p class="ms_inline ms_class">
+                Result: internal style (color:red) will be given priority
+            </p>
+        </div>
+        <div class="row">
+            <h4>Case 3: Use media query(min-width:320px - color:aqua) and css other(color:brown)</h4>
+            <p class="ms_media ms_class">
+                Result: media query wil be given priority because width > 320 px
+            </p>
+        </div>
+        <div class="row">
+            <h4>Case 4: Selector Specificity ( #ms_id(color:green) .ms_class(color:brown) - tag Html(color:orange))</h4>
+            <p class="ms_class" id="ms_id">
+                Result: Id will be given priority
+            </p>
+        </div>
+    </div>
+    </body>
+</html>

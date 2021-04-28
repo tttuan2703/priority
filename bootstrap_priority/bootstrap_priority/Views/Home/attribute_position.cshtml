@@ -1,0 +1,79 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>attribute_position</title>
+    <style>
+        .container_1 {
+            width: 300px;
+            min-height: 2000px;
+            border: 2px solid #000000;
+            margin-left: 200px
+        }
+
+        body {
+        }
+
+        p {
+            border: 1px solid #000000
+        }
+        div{
+            border:2px solid #000000;
+            width:100px;
+            height:100px;
+        }
+        .sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            padding: 5px;
+            background-color: #cae8ca;
+            border: 2px solid #4CAF50;
+        }
+        .relative {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background: red;
+            left: 10px;
+            top: 20px;
+        }
+        .static {
+            position: static;
+            width: 100px;
+            height: 100px;
+            background: red;
+            left: 10px;
+            top: 200px;
+        }
+        .fixed {
+            position: fixed;
+            width: 100px;
+            height: 100px;
+            background: blue;
+            left: 10px;
+            top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container_1" >
+        <h4>Position: static</h4>
+        <div class="static">Static</div>
+        <h4>Position: Relative</h4>
+        <div style="position:relative">Relative</div>
+        <h4>Position: Fixed</h4>
+        <div class="fixed">Fixed</div>
+        <h4>Position: Sticky</h4>
+        <div class="sticky">Sticky</div>
+        <h4>Position: Absolute</h4>
+        <div style="position:absolute">Absolute</div>
+    </div>
+</body>
+</html>

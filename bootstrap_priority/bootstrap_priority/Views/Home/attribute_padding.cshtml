@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "attribute_padding";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="~/Css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="~/Css/bootstrap-theme.css" />
+    <script type="text/javascript" src="~/Js/bootstrap.js"></script>
+    <script type="text/javascript" src="~/Js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="~/Css/style.css" />
+    <style>
+        .ms_important {
+            color: blueviolet !important;
+        }
+
+        .ms_inline {
+            color: red;
+        }
+
+        button {
+            text-align: center;
+            border: 2px solid #000000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button style="padding:50px"> Padding : 50px</button>
+        <button style="padding:50px 30px"> Padding : 50px 30px (top=bot, left = right)</button>
+        <button style="padding:50px 30px 20px"> Padding : 50px 30px 20px(top, left = right, bot)</button>
+        <button style="padding:50px 30px 20px 10px"> Padding : 50px 30px 20px 10px(top, left, right, bot)</button>
+    </div>
+    </body>
+</html>
+
